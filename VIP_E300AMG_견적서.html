@@ -134,6 +134,68 @@
   .highlight-box.red .hl-value { color: #e05050; }
 
   /* Footer */
+  .landing-banner {
+    display: block;
+    text-decoration: none;
+    background: linear-gradient(135deg, #13120a 0%, #1a1608 50%, #13120a 100%);
+    border: 1px solid #c9a84c;
+    border-radius: 12px;
+    margin: 8px 0 20px;
+    padding: 18px 20px;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+  }
+  .landing-banner::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, #c9a84c, transparent);
+  }
+  .landing-banner:hover {
+    background: linear-gradient(135deg, #1a1608 0%, #221c08 50%, #1a1608 100%);
+    box-shadow: 0 0 20px rgba(201,168,76,0.25);
+    transform: translateY(-1px);
+  }
+  .landing-banner-inner {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+  }
+  .landing-icon {
+    color: #c9a84c;
+    font-size: 20px;
+    flex-shrink: 0;
+    animation: pulse 2s infinite;
+  }
+  @keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.5; }
+  }
+  .landing-text { flex: 1; }
+  .landing-title {
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    color: #c9a84c;
+    letter-spacing: 0.5px;
+    margin-bottom: 4px;
+  }
+  .landing-sub {
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 11px;
+    color: #888;
+    letter-spacing: 0.3px;
+  }
+  .landing-arrow {
+    color: #c9a84c;
+    font-size: 28px;
+    font-weight: 300;
+    flex-shrink: 0;
+    line-height: 1;
+  }
+
   .footer {
     text-align: center;
     margin-top: 48px;
@@ -256,6 +318,18 @@
       <div class="hl-sub">원 / 월 · 60개월</div>
     </div>
   </div>
+
+  <!-- 랜딩페이지 링크 배너 -->
+  <a href="https://homanhan-glitch.github.io/benzdream-approach/BenzDream_Landing.html" target="_blank" class="landing-banner">
+    <div class="landing-banner-inner">
+      <div class="landing-icon">✦</div>
+      <div class="landing-text">
+        <div class="landing-title">차종별 옵션 비교 · 실시간 재고 확인</div>
+        <div class="landing-sub">BenzDream 공식 페이지에서 지금 바로 확인하세요 →</div>
+      </div>
+      <div class="landing-arrow">›</div>
+    </div>
+  </a>
 
   <div class="footer">
     <div class="brand">BENZ DREAM</div>
