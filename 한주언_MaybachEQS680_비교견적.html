@@ -3,73 +3,78 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Mercedes-Maybach EQS 680 SUV 비교견적 | BenzDream</title>
+<title>한주언_MaybachEQS680_비교견적 | BenzDream</title>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&family=Playfair+Display:wght@400;700&family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
 <style>
 *{margin:0;padding:0;box-sizing:border-box;}
 body{background:#0a0a0f;color:#e8e8e8;font-family:"Noto Sans KR",sans-serif;min-height:100vh;}
 .banner-container{background:#0a0a0f;line-height:0;}
 .banner-container img{display:block;width:100%;vertical-align:top;}
-.container{max-width:920px;margin:0 auto;padding:32px 20px;}
-.date-title{text-align:center;padding:32px 0 24px;}
-.date-label{font-family:"Montserrat",sans-serif;font-size:12px;color:#888;letter-spacing:3px;text-transform:uppercase;margin-bottom:10px;}
-.main-title{font-family:"Playfair Display",serif;font-size:28px;color:#c9a84c;font-weight:700;margin-bottom:6px;}
-.sub-title{font-family:"Montserrat",sans-serif;font-size:13px;color:#aaa;letter-spacing:1px;}
-.customer-bar{background:linear-gradient(135deg,rgba(201,168,76,0.12),rgba(201,168,76,0.05));border:1px solid rgba(201,168,76,0.3);border-radius:10px;padding:14px 24px;display:flex;justify-content:space-between;align-items:center;margin-bottom:28px;}
-.customer-name{font-family:"Playfair Display",serif;font-size:18px;color:#c9a84c;font-weight:700;}
-.customer-sub{font-size:12px;color:#888;font-family:"Montserrat",sans-serif;letter-spacing:1px;}
+.container{max-width:920px;margin:0 auto;padding:28px 16px;}
 
-/* 2컬럼 상품 카드 레이아웃 */
-.two-col{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:20px;}
-.product-card{background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.08);border-radius:12px;padding:22px;}
+.date-title{text-align:center;padding:28px 0 20px;}
+.date-label{font-family:"Montserrat",sans-serif;font-size:11px;color:#888;letter-spacing:3px;text-transform:uppercase;margin-bottom:10px;}
+.main-title{font-family:"Playfair Display",serif;font-size:24px;color:#c9a84c;font-weight:700;margin-bottom:6px;}
+.sub-title{font-family:"Montserrat",sans-serif;font-size:12px;color:#aaa;letter-spacing:1px;}
+
+.customer-bar{background:linear-gradient(135deg,rgba(201,168,76,0.12),rgba(201,168,76,0.05));border:1px solid rgba(201,168,76,0.3);border-radius:10px;padding:14px 20px;display:flex;justify-content:space-between;align-items:center;margin-bottom:22px;flex-wrap:wrap;gap:10px;}
+.customer-name{font-family:"Playfair Display",serif;font-size:18px;color:#c9a84c;font-weight:700;}
+.customer-sub{font-size:12px;color:#888;font-family:"Montserrat",sans-serif;letter-spacing:1px;margin-top:3px;}
+
+.card{background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.08);border-radius:12px;padding:20px;margin-bottom:16px;}
+.card-title{font-family:"Montserrat",sans-serif;font-size:10px;letter-spacing:3px;text-transform:uppercase;color:#c9a84c;margin-bottom:14px;padding-bottom:10px;border-bottom:1px solid rgba(201,168,76,0.2);}
+
+.info-item{display:flex;justify-content:space-between;align-items:center;padding:9px 0;border-bottom:1px solid rgba(255,255,255,0.04);font-size:13px;}
+.info-item:last-child{border-bottom:none;}
+.lbl{color:#888;font-size:12px;flex-shrink:0;margin-right:8px;}
+.val{color:#e8e8e8;font-weight:500;text-align:right;}
+.val.gold{color:#c9a84c;font-weight:700;}
+.val.red{color:#e05050;font-weight:600;}
+
+/* 2컬럼 → 모바일에서 1컬럼 */
+.two-col{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:16px;}
+@media(max-width:600px){
+  .two-col{grid-template-columns:1fr;}
+}
+
+.product-card{background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.08);border-radius:12px;padding:20px;}
 .product-card.lease-card{border-color:rgba(106,180,245,0.25);}
 .product-card.rent-card{border-color:rgba(130,217,197,0.25);}
-.product-badge{display:inline-block;border-radius:20px;padding:3px 12px;font-size:10px;font-family:"Montserrat",sans-serif;letter-spacing:2px;text-transform:uppercase;margin-bottom:12px;font-weight:600;}
+.product-badge{display:inline-block;border-radius:20px;padding:3px 12px;font-size:10px;font-family:"Montserrat",sans-serif;letter-spacing:2px;text-transform:uppercase;margin-bottom:10px;font-weight:600;}
 .lease-badge{background:rgba(106,180,245,0.1);color:#6ab4f5;border:1px solid rgba(106,180,245,0.3);}
 .rent-badge{background:rgba(130,217,197,0.1);color:#82d9c5;border:1px solid rgba(130,217,197,0.3);}
-.company-name{font-size:12px;color:#888;margin-bottom:16px;padding-bottom:12px;border-bottom:1px solid rgba(255,255,255,0.06);}
+.company-name{font-size:12px;color:#888;margin-bottom:14px;padding-bottom:10px;border-bottom:1px solid rgba(255,255,255,0.06);}
 
-.info-item{display:flex;justify-content:space-between;align-items:center;padding:8px 0;border-bottom:1px solid rgba(255,255,255,0.04);font-size:12px;}
-.info-item:last-child{border-bottom:none;}
-.info-label{color:#888;}
-.info-value{color:#e8e8e8;font-weight:500;text-align:right;}
-.info-value.gold{color:#c9a84c;font-weight:700;}
-.info-value.red{color:#e05050;font-weight:600;}
-.info-value.big-gold{color:#c9a84c;font-weight:700;font-size:15px;}
-.info-value.big-red{color:#e05050;font-weight:700;font-size:15px;}
+/* 핵심 요약 — 모바일 대응 */
+.summary-section{margin-bottom:16px;}
+.summary-header{font-family:"Montserrat",sans-serif;font-size:10px;letter-spacing:2px;text-transform:uppercase;text-align:center;margin-bottom:12px;padding:8px;border-radius:6px;}
+.lease-header{color:#6ab4f5;background:rgba(106,180,245,0.06);}
+.rent-header{color:#82d9c5;background:rgba(130,217,197,0.06);}
 
-/* 차량정보 공통 카드 */
-.card{background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.08);border-radius:12px;padding:24px;margin-bottom:20px;}
-.card-title{font-family:"Montserrat",sans-serif;font-size:11px;letter-spacing:3px;text-transform:uppercase;color:#c9a84c;margin-bottom:18px;padding-bottom:12px;border-bottom:1px solid rgba(201,168,76,0.2);}
-.full-grid{display:grid;grid-template-columns:1fr 1fr;gap:0;}
-.full-row{grid-column:1/-1;}
-
-/* 핵심 요약 박스 */
-.summary-box{border-radius:12px;padding:24px 20px;text-align:center;}
-.red-box{background:linear-gradient(135deg,rgba(224,80,80,0.12),rgba(224,80,80,0.05));border:1px solid rgba(224,80,80,0.4);}
-.gold-box{background:linear-gradient(135deg,rgba(201,168,76,0.15),rgba(201,168,76,0.05));border:1px solid rgba(201,168,76,0.5);}
-.sum-label{font-family:"Montserrat",sans-serif;font-size:10px;letter-spacing:2px;text-transform:uppercase;margin-bottom:10px;}
-.sum-amount{font-family:"Montserrat",sans-serif;font-weight:700;margin-bottom:4px;}
+.sum-row{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:12px;}
+.sum-box{border-radius:12px;padding:20px 14px;text-align:center;}
+.red-box{background:linear-gradient(135deg,rgba(224,80,80,0.12),rgba(224,80,80,0.05));border:1px solid rgba(224,80,80,0.45);}
+.gold-box{background:linear-gradient(135deg,rgba(201,168,76,0.15),rgba(201,168,76,0.05));border:1px solid rgba(201,168,76,0.55);}
+.sum-label{font-family:"Montserrat",sans-serif;font-size:10px;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:8px;white-space:nowrap;}
+.sum-amount{font-family:"Montserrat",sans-serif;font-weight:700;font-size:22px;margin-bottom:4px;line-height:1.2;}
 .sum-sub{font-size:11px;color:#888;}
-.two-summary{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:16px;}
+.sum-notes{font-size:11px;color:#777;line-height:1.9;padding:12px 14px;background:rgba(255,255,255,0.02);border-radius:8px;}
 
 /* 랜딩배너 */
-.landing-banner{display:block;background:linear-gradient(135deg,#13120a,#1a1608,#13120a);border:1px solid #c9a84c;border-radius:12px;padding:20px 28px;text-decoration:none;transition:all 0.3s ease;margin-bottom:20px;position:relative;overflow:hidden;}
+.landing-banner{display:block;background:linear-gradient(135deg,#13120a,#1a1608,#13120a);border:1px solid #c9a84c;border-radius:12px;padding:18px 22px;text-decoration:none;transition:all 0.3s ease;margin-bottom:20px;position:relative;overflow:hidden;}
 .landing-banner::before{content:"";position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,transparent,#c9a84c,transparent);}
 .landing-banner:hover{transform:translateY(-1px);box-shadow:0 8px 30px rgba(201,168,76,0.2);}
-.landing-inner{display:flex;align-items:center;gap:20px;}
-.landing-icon{font-size:22px;color:#c9a84c;animation:pulse 2s infinite;}
+.landing-inner{display:flex;align-items:center;gap:16px;}
+.landing-icon{font-size:20px;color:#c9a84c;animation:pulse 2s infinite;flex-shrink:0;}
 @keyframes pulse{0%,100%{opacity:1;}50%{opacity:0.6;}}
-.landing-text{flex:1;}
-.landing-title{font-family:"Montserrat",sans-serif;font-size:14px;font-weight:700;color:#c9a84c;margin-bottom:4px;}
+.landing-text{flex:1;min-width:0;}
+.landing-title{font-family:"Montserrat",sans-serif;font-size:13px;font-weight:700;color:#c9a84c;margin-bottom:4px;}
 .landing-sub{font-size:12px;color:#888;}
-.landing-arrow{font-size:24px;color:#c9a84c;}
+.landing-arrow{font-size:22px;color:#c9a84c;flex-shrink:0;}
 
-footer{text-align:center;padding:32px 20px;border-top:1px solid rgba(255,255,255,0.06);margin-top:8px;}
+footer{text-align:center;padding:28px 20px;border-top:1px solid rgba(255,255,255,0.06);}
 .footer-brand{font-family:"Playfair Display",serif;font-size:18px;color:#c9a84c;margin-bottom:6px;}
 .footer-sub{font-size:11px;color:#555;font-family:"Montserrat",sans-serif;letter-spacing:1px;margin-top:4px;}
-
-.divider-label{text-align:center;font-family:"Montserrat",sans-serif;font-size:10px;letter-spacing:3px;color:#555;text-transform:uppercase;margin:4px 0 16px;}
 </style>
 </head>
 <body>
@@ -80,14 +85,12 @@ footer{text-align:center;padding:32px 20px;border-top:1px solid rgba(255,255,255
 
 <div class="container">
 
-<!-- 날짜/타이틀 -->
 <div class="date-title">
 <div class="date-label">2026. 02. 24 견적 기준</div>
 <div class="main-title">Mercedes-Maybach EQS 680 SUV</div>
 <div class="sub-title">운용리스 · 장기렌트 비교견적서</div>
 </div>
 
-<!-- 고객바 -->
 <div class="customer-bar">
 <div>
 <div class="customer-name">한주언 고객님</div>
@@ -99,165 +102,116 @@ footer{text-align:center;padding:32px 20px;border-top:1px solid rgba(255,255,255
 </div>
 </div>
 
-<!-- 차량정보 공통 -->
+<!-- 차량정보 -->
 <div class="card">
 <div class="card-title">✦ 차량 정보 (공통)</div>
-<div class="full-grid">
-<div class="info-item full-row">
-<span class="info-label">모델</span>
-<span class="info-value gold">Mercedes-Maybach EQS 680 SUV (KR3 MY26)</span>
+<div class="info-item">
+<span class="lbl">모델</span>
+<span class="val gold">Mercedes-Maybach EQS 680 SUV (KR3 MY26)</span>
 </div>
-<div class="info-item full-row">
-<span class="info-label">외장색상</span>
-<span class="info-value">771U — Velvet Brown</span>
+<div class="info-item">
+<span class="lbl">외장색상</span>
+<span class="val">771U — Velvet Brown</span>
 </div>
-<div class="info-item full-row">
-<span class="info-label">내장색상</span>
-<span class="info-value">514A — Maybach Exclusive Nappa Leather</span>
+<div class="info-item">
+<span class="lbl">내장색상</span>
+<span class="val">514A — Maybach Exclusive Nappa Leather</span>
 </div>
-<div class="info-item full-row">
-<span class="info-label">기본 소비자가격</span>
-<span class="info-value">233,600,000원</span>
-</div>
+<div class="info-item">
+<span class="lbl">기본 소비자가격</span>
+<span class="val">233,600,000원</span>
 </div>
 </div>
 
-<!-- 취득원가 / 금융조건 — 상품별 2컬럼 -->
-<div class="divider-label">상품별 조건 비교</div>
+<!-- 상품별 2컬럼 -->
 <div class="two-col">
 
-  <!-- 운용리스 -->
   <div class="product-card lease-card">
     <div class="product-badge lease-badge">운용리스</div>
     <div class="company-name">산은캐피탈</div>
-
-    <div style="font-size:10px;letter-spacing:2px;color:#6ab4f5;font-family:Montserrat,sans-serif;text-transform:uppercase;margin-bottom:10px;">취득원가</div>
-    <div class="info-item">
-      <span class="info-label">기본가격</span>
-      <span class="info-value">233,600,000원</span>
+    <div class="info-item"><span class="lbl">기본가격</span><span class="val">233,600,000원</span></div>
+    <div class="info-item"><span class="lbl">할인 (EQ 지원금)</span><span class="val red">▼ 25,000,000원</span></div>
+    <div class="info-item"><span class="lbl">최종 차량가</span><span class="val gold">208,600,000원</span></div>
+    <div class="info-item"><span class="lbl">취득세</span><span class="val">13,274,530원</span></div>
+    <div class="info-item"><span class="lbl">부대비용</span><span class="val">90,000원</span></div>
+    <div class="info-item" style="border-top:1px solid rgba(106,180,245,0.15);margin-top:4px;padding-top:10px;">
+      <span class="lbl">취득원가 합계</span><span class="val gold">221,964,530원</span>
     </div>
-    <div class="info-item">
-      <span class="info-label">할인 (EQ 지원금)</span>
-      <span class="info-value red">▼ 25,000,000원</span>
-    </div>
-    <div class="info-item">
-      <span class="info-label">최종 차량가</span>
-      <span class="info-value gold">208,600,000원</span>
-    </div>
-    <div class="info-item">
-      <span class="info-label">취득세</span>
-      <span class="info-value">13,274,530원</span>
-    </div>
-    <div class="info-item">
-      <span class="info-label">부대비용</span>
-      <span class="info-value">90,000원</span>
-    </div>
-    <div class="info-item" style="border-top:1px solid rgba(106,180,245,0.2);margin-top:4px;padding-top:10px;">
-      <span class="info-label">취득원가 합계</span>
-      <span class="info-value big-gold">221,964,530원</span>
-    </div>
-
-    <div style="font-size:10px;letter-spacing:2px;color:#6ab4f5;font-family:Montserrat,sans-serif;text-transform:uppercase;margin:18px 0 10px;">계약 조건</div>
-    <div class="info-item"><span class="info-label">리스기간</span><span class="info-value">60개월</span></div>
-    <div class="info-item"><span class="info-label">약정거리</span><span class="info-value">30,000km/년</span></div>
-    <div class="info-item"><span class="info-label">선납금</span><span class="info-value">0% / 0원</span></div>
-    <div class="info-item"><span class="info-label">보증금</span><span class="info-value">0% / 0원</span></div>
-    <div class="info-item"><span class="info-label">잔존가치</span><span class="info-value">40% / 83,440,000원</span></div>
-    <div class="info-item"><span class="info-label">만기처리</span><span class="info-value">인수 / 반납 / 재리스</span></div>
-    <div class="info-item"><span class="info-label">차량등록명의</span><span class="info-value">산은캐피탈(주)</span></div>
-    <div class="info-item"><span class="info-label">보험</span><span class="info-value">고객 별도</span></div>
+    <div style="height:14px;"></div>
+    <div class="info-item"><span class="lbl">계약기간</span><span class="val">60개월</span></div>
+    <div class="info-item"><span class="lbl">약정거리</span><span class="val">30,000km/년</span></div>
+    <div class="info-item"><span class="lbl">선납금</span><span class="val">0% / 0원</span></div>
+    <div class="info-item"><span class="lbl">보증금</span><span class="val">0% / 0원</span></div>
+    <div class="info-item"><span class="lbl">잔존가치</span><span class="val">40% / 83,440,000원</span></div>
+    <div class="info-item"><span class="lbl">만기처리</span><span class="val">인수/반납/재리스</span></div>
+    <div class="info-item"><span class="lbl">차량등록명의</span><span class="val">산은캐피탈(주)</span></div>
+    <div class="info-item"><span class="lbl">보험</span><span class="val">고객 별도</span></div>
   </div>
 
-  <!-- 장기렌트 -->
   <div class="product-card rent-card">
     <div class="product-badge rent-badge">장기렌트</div>
     <div class="company-name">Mercedes-Benz Mobility Korea</div>
-
-    <div style="font-size:10px;letter-spacing:2px;color:#82d9c5;font-family:Montserrat,sans-serif;text-transform:uppercase;margin-bottom:10px;">취득원가</div>
-    <div class="info-item">
-      <span class="info-label">기본가격</span>
-      <span class="info-value">233,600,000원</span>
-    </div>
-    <div class="info-item">
-      <span class="info-label">할인</span>
-      <span class="info-value" style="color:#555;">해당 없음</span>
-    </div>
-    <div class="info-item">
-      <span class="info-label">최종 차량가</span>
-      <span class="info-value gold">233,600,000원</span>
-    </div>
-    <div class="info-item">
-      <span class="info-label">초기비용</span>
-      <span class="info-value">선납금+보증금 기준</span>
-    </div>
-    <div class="info-item">
-      <span class="info-label">초기비용 합계</span>
-      <span class="info-value">0% / 0원</span>
-    </div>
-    <div class="info-item" style="border-top:1px solid rgba(130,217,197,0.2);margin-top:4px;padding-top:10px;">
-      <span class="info-label">만기 인수가 (VAT포함)</span>
-      <span class="info-value big-gold">72,416,000원</span>
-    </div>
-
-    <div style="font-size:10px;letter-spacing:2px;color:#82d9c5;font-family:Montserrat,sans-serif;text-transform:uppercase;margin:18px 0 10px;">계약 조건</div>
-    <div class="info-item"><span class="info-label">계약기간</span><span class="info-value">60개월</span></div>
-    <div class="info-item"><span class="info-label">약정거리</span><span class="info-value">30,000km/년</span></div>
-    <div class="info-item"><span class="info-label">선납금</span><span class="info-value">0% / 0원</span></div>
-    <div class="info-item"><span class="info-label">보증금</span><span class="info-value">0% / 0원</span></div>
-    <div class="info-item"><span class="info-label">잔존가치</span><span class="info-value">31% / 72,416,000원</span></div>
-    <div class="info-item"><span class="info-label">만기처리</span><span class="info-value">인수 가능</span></div>
-    <div class="info-item"><span class="info-label">차량등록명의</span><span class="info-value">MB Mobility Korea</span></div>
-    <div class="info-item"><span class="info-label">보험</span><span class="info-value" style="color:#82d9c5;">삼성화재 포함 ✓</span></div>
+    <div class="info-item"><span class="lbl">기본가격</span><span class="val">233,600,000원</span></div>
+    <div class="info-item"><span class="lbl">할인</span><span class="val" style="color:#555;">해당 없음</span></div>
+    <div class="info-item"><span class="lbl">최종 차량가</span><span class="val gold">233,600,000원</span></div>
+    <div class="info-item"><span class="lbl">초기비용</span><span class="val">0원</span></div>
+    <div class="info-item"><span class="lbl">만기 인수가</span><span class="val gold">72,416,000원</span></div>
+    <div style="height:14px;"></div>
+    <div class="info-item"><span class="lbl">계약기간</span><span class="val">60개월</span></div>
+    <div class="info-item"><span class="lbl">약정거리</span><span class="val">30,000km/년</span></div>
+    <div class="info-item"><span class="lbl">선납금</span><span class="val">0% / 0원</span></div>
+    <div class="info-item"><span class="lbl">보증금</span><span class="val">0% / 0원</span></div>
+    <div class="info-item"><span class="lbl">잔존가치</span><span class="val">31% / 72,416,000원</span></div>
+    <div class="info-item"><span class="lbl">만기처리</span><span class="val">인수 가능</span></div>
+    <div class="info-item"><span class="lbl">차량등록명의</span><span class="val">MB Mobility Korea</span></div>
+    <div class="info-item"><span class="lbl">보험</span><span class="val" style="color:#82d9c5;">삼성화재 포함 ✓</span></div>
   </div>
 
 </div>
 
-<!-- 핵심 요약 2분할 -->
-<div class="two-col" style="gap:16px;">
-
-  <div style="background:rgba(106,180,245,0.04);border:1px solid rgba(106,180,245,0.2);border-radius:12px;padding:20px;">
-    <div style="font-family:Montserrat,sans-serif;font-size:10px;letter-spacing:2px;color:#6ab4f5;text-transform:uppercase;text-align:center;margin-bottom:14px;">운용리스 — 산은캐피탈</div>
-    <div class="two-summary">
-      <div class="summary-box red-box">
-        <div class="sum-label" style="color:#e05050;">초기납입금</div>
-        <div class="sum-amount" style="color:#e05050;font-size:22px;">0원</div>
-        <div class="sum-sub">선납 + 보증금</div>
-      </div>
-      <div class="summary-box gold-box">
-        <div class="sum-label" style="color:#c9a84c;">월 리스료</div>
-        <div class="sum-amount" style="color:#c9a84c;font-size:18px;">3,331,700</div>
-        <div class="sum-sub">원 / VAT 포함</div>
-      </div>
+<!-- 핵심 요약 — 운용리스 -->
+<div class="summary-section">
+  <div class="summary-header lease-header">운용리스 — 산은캐피탈</div>
+  <div class="sum-row">
+    <div class="sum-box red-box">
+      <div class="sum-label" style="color:#e05050;">초기납입금</div>
+      <div class="sum-amount" style="color:#e05050;">0원</div>
+      <div class="sum-sub">선납금 + 보증금</div>
     </div>
-    <div style="font-size:11px;color:#777;line-height:1.8;padding-top:10px;border-top:1px solid rgba(255,255,255,0.06);">
-      • 할인 25,000,000원 적용<br>
-      • 잔존가치 40% (만기인수 8,344만원)<br>
-      • 인수 / 반납 / 재리스 선택 가능
+    <div class="sum-box gold-box">
+      <div class="sum-label" style="color:#c9a84c;">월 리스료</div>
+      <div class="sum-amount" style="color:#c9a84c;">3,331,700원</div>
+      <div class="sum-sub">VAT 포함</div>
     </div>
   </div>
+  <div class="sum-notes">
+    • 할인 25,000,000원 적용<br>
+    • 잔존가치 40% (만기인수 8,344만원)<br>
+    • 인수 / 반납 / 재리스 선택 가능
+  </div>
+</div>
 
-  <div style="background:rgba(130,217,197,0.04);border:1px solid rgba(130,217,197,0.2);border-radius:12px;padding:20px;">
-    <div style="font-family:Montserrat,sans-serif;font-size:10px;letter-spacing:2px;color:#82d9c5;text-transform:uppercase;text-align:center;margin-bottom:14px;">장기렌트 — MB Mobility</div>
-    <div class="two-summary">
-      <div class="summary-box red-box">
-        <div class="sum-label" style="color:#e05050;">초기납입금</div>
-        <div class="sum-amount" style="color:#e05050;font-size:22px;">0원</div>
-        <div class="sum-sub">선납 + 보증금</div>
-      </div>
-      <div class="summary-box gold-box">
-        <div class="sum-label" style="color:#c9a84c;">월 대여료</div>
-        <div class="sum-amount" style="color:#c9a84c;font-size:18px;">3,729,000</div>
-        <div class="sum-sub">원 / VAT 포함</div>
-      </div>
+<!-- 핵심 요약 — 장기렌트 -->
+<div class="summary-section">
+  <div class="summary-header rent-header">장기렌트 — MB Mobility Korea</div>
+  <div class="sum-row">
+    <div class="sum-box red-box">
+      <div class="sum-label" style="color:#e05050;">초기납입금</div>
+      <div class="sum-amount" style="color:#e05050;">0원</div>
+      <div class="sum-sub">선납금 + 보증금</div>
     </div>
-    <div style="font-size:11px;color:#777;line-height:1.8;padding-top:10px;border-top:1px solid rgba(255,255,255,0.06);">
-      • 삼성화재 보험 포함<br>
-      • 법인 고객 연두색 번호판 적용<br>
-      • 충전권 100만원권 제공 (EQ 혜택)<br>
-      • 만기 인수가 31% / 72,416,000원
+    <div class="sum-box gold-box">
+      <div class="sum-label" style="color:#c9a84c;">월 대여료</div>
+      <div class="sum-amount" style="color:#c9a84c;">3,729,000원</div>
+      <div class="sum-sub">VAT 포함</div>
     </div>
   </div>
-
+  <div class="sum-notes">
+    • 삼성화재 보험 포함<br>
+    • 법인 고객 연두색 번호판 적용<br>
+    • 충전권 100만원권 제공 (EQ 혜택)<br>
+    • 만기 인수가 31% / 72,416,000원
+  </div>
 </div>
 
 <!-- 랜딩배너 -->
