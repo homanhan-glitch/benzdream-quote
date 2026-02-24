@@ -84,6 +84,7 @@
 
   @media (max-width: 600px) {
     .compare-grid, .summary-grid { grid-template-columns: 1fr; }
+    .summary-4col { grid-template-columns: 1fr 1fr !important; }
     .gallery-sub { grid-template-columns: repeat(2, 1fr); }
     .customer-bar { flex-direction: column; gap: 8px; text-align: center; }
     .quote-title { font-size: 22px; }
@@ -213,34 +214,38 @@
     </div>
   </div>
 
-  <div style="margin-bottom:8px;font-size:12px;color:#888;text-align:center;letter-spacing:1px;">◆ 운용리스 핵심 요약</div>
-  <div class="summary-grid" style="margin-bottom:16px;">
-    <div class="summary-box red">
+  <!-- 핵심 요약 : 4분할 (운용리스 왼쪽 2칸 / 장기렌트 오른쪽 2칸) -->
+  <div style="display:grid;grid-template-columns:1fr 1fr 1fr 1fr;gap:12px;margin-bottom:24px;">
+    <!-- 운용리스 초기납입 -->
+    <div class="summary-box red" style="border-radius:12px;padding:18px;text-align:center;position:relative;">
+      <div style="font-size:9px;color:#e05050;font-family:'Montserrat',sans-serif;letter-spacing:1px;margin-bottom:6px;">운용리스</div>
       <div class="box-label">초기 납입금</div>
       <div class="box-sub">선납금 + 보증금</div>
-      <div class="box-amount">0원</div>
+      <div class="box-amount" style="font-size:22px;">0원</div>
       <div class="box-unit">선납 · 보증금 없음</div>
     </div>
-    <div class="summary-box gold">
+    <!-- 운용리스 월리스료 -->
+    <div class="summary-box gold" style="border-radius:12px;padding:18px;text-align:center;">
+      <div style="font-size:9px;color:#c9a84c;font-family:'Montserrat',sans-serif;letter-spacing:1px;margin-bottom:6px;">운용리스</div>
       <div class="box-label">월 리스료</div>
       <div class="box-sub">VAT 포함</div>
-      <div class="box-amount">3,460,300</div>
+      <div class="box-amount" style="font-size:22px;">3,460,300</div>
       <div class="box-unit">원 / 월</div>
     </div>
-  </div>
-
-  <div style="margin-bottom:8px;font-size:12px;color:#888;text-align:center;letter-spacing:1px;">◆ 장기렌트 핵심 요약</div>
-  <div class="summary-grid">
-    <div class="summary-box red">
+    <!-- 장기렌트 초기납입 -->
+    <div class="summary-box red" style="border-radius:12px;padding:18px;text-align:center;">
+      <div style="font-size:9px;color:#e05050;font-family:'Montserrat',sans-serif;letter-spacing:1px;margin-bottom:6px;">장기렌트</div>
       <div class="box-label">초기 납입금</div>
       <div class="box-sub">선납금 + 보증금</div>
-      <div class="box-amount">0원</div>
+      <div class="box-amount" style="font-size:22px;">0원</div>
       <div class="box-unit">선납 · 보증금 없음</div>
     </div>
-    <div class="summary-box gold">
+    <!-- 장기렌트 월대여료 -->
+    <div class="summary-box gold" style="border-radius:12px;padding:18px;text-align:center;">
+      <div style="font-size:9px;color:#c9a84c;font-family:'Montserrat',sans-serif;letter-spacing:1px;margin-bottom:6px;">장기렌트</div>
       <div class="box-label">월 대여료</div>
-      <div class="box-sub">VAT 포함 · 보험 포함</div>
-      <div class="box-amount">3,872,000</div>
+      <div class="box-sub">VAT · 보험 포함</div>
+      <div class="box-amount" style="font-size:22px;">3,872,000</div>
       <div class="box-unit">원 / 월</div>
     </div>
   </div>
