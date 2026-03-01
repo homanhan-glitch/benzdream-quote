@@ -25,35 +25,24 @@ body{background:#0a0a0f;color:#e8e8e8;font-family:'Noto Sans KR',sans-serif;line
 .card-header{text-align:center;margin-bottom:18px;padding-bottom:14px;border-bottom:1px solid #2a2a3a}
 .card-header .model-badge{display:inline-block;padding:4px 14px;border-radius:20px;font-size:11px;font-weight:600;letter-spacing:1px;margin-bottom:8px;background:rgba(201,168,76,0.15);color:#c9a84c;border:1px solid rgba(201,168,76,0.3)}
 .card-header .model-name{font-family:'Montserrat',sans-serif;font-size:18px;font-weight:700;color:#fff}
-.card-header .cc{font-size:12px;color:#666;margin-top:4px}
 .row{display:flex;justify-content:space-between;align-items:center;padding:9px 0;border-bottom:1px solid rgba(255,255,255,0.04)}
 .row:last-child{border-bottom:none}
 .row .label{font-size:13px;color:#888}.row .value{font-size:14px;font-weight:500;color:#e8e8e8;font-family:'Montserrat',sans-serif}
 .row .value.highlight{color:#c9a84c;font-weight:700;font-size:16px}
 .row .value.discount{color:#e74c3c;font-weight:600}
 .row .value.option{color:#4ecdc4;font-size:13px;font-family:'Noto Sans KR',sans-serif}
-.row-sub{padding-left:20px}
 .divider{height:1px;background:rgba(201,168,76,0.15);margin:6px 0}
-.summary-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:24px 0}
-.summary-box{border-radius:14px;padding:24px;text-align:center}
-.summary-box .label{font-size:13px;margin-bottom:8px}
-.summary-box .amount{font-family:'Montserrat',sans-serif;font-size:24px;font-weight:700}
-.summary-box .sub{font-size:11px;margin-top:4px}
-.summary-box.initial{background:linear-gradient(135deg,rgba(231,76,60,0.12),rgba(231,76,60,0.05));border:1px solid rgba(231,76,60,0.25)}
-.summary-box.initial .label{color:#e74c3c}.summary-box.initial .amount{color:#e74c3c}.summary-box.initial .sub{color:rgba(231,76,60,0.6)}
-.summary-box.monthly{background:linear-gradient(135deg,rgba(201,168,76,0.12),rgba(201,168,76,0.05));border:1px solid rgba(201,168,76,0.25)}
-.summary-box.monthly .label{color:#c9a84c}.summary-box.monthly .amount{color:#c9a84c}.summary-box.monthly .sub{color:rgba(201,168,76,0.6)}
+.summary-box-single{border-radius:14px;padding:28px;text-align:center;margin:24px 0;background:linear-gradient(135deg,rgba(201,168,76,0.12),rgba(201,168,76,0.05));border:1px solid rgba(201,168,76,0.25)}
+.summary-box-single .label{font-size:14px;color:#c9a84c;margin-bottom:10px}
+.summary-box-single .amount{font-family:'Montserrat',sans-serif;font-size:28px;font-weight:700;color:#c9a84c}
+.summary-box-single .sub{font-size:12px;margin-top:6px;color:rgba(201,168,76,0.6)}
 .landing-banner{display:block;margin:36px auto;text-align:center}
 .landing-banner a{display:inline-block;background:linear-gradient(135deg,#c9a84c,#a8893a);color:#0a0a0f;padding:16px 48px;border-radius:50px;text-decoration:none;font-weight:700;font-size:15px;letter-spacing:1px;transition:all 0.3s}
 .landing-banner a:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(201,168,76,0.3)}
 .footer{text-align:center;padding:32px 0;border-top:1px solid #1a1a2a;margin-top:20px}
 .footer p{font-size:12px;color:#555;line-height:1.8}
 .footer .brand{font-family:'Playfair Display',serif;color:#c9a84c;font-size:16px;margin-bottom:8px}
-.bond-note{display:flex;gap:16px;margin-top:12px}
-.bond-note .bond-box{flex:1;background:rgba(255,255,255,0.03);border:1px solid #2a2a3a;border-radius:10px;padding:14px;text-align:center}
-.bond-note .bond-box .label{font-size:11px;color:#888;margin-bottom:4px}
-.bond-note .bond-box .value{font-family:'Montserrat',sans-serif;font-size:15px;font-weight:600;color:#e8e8e8}
-@media(max-width:680px){.summary-grid{grid-template-columns:1fr}.customer-bar{flex-direction:column;gap:12px;text-align:center}.header h1{font-size:24px}.bond-note{flex-direction:column}}
+@media(max-width:680px){.customer-bar{flex-direction:column;gap:12px;text-align:center}.header h1{font-size:24px}}
 </style>
 </head>
 <body>
@@ -76,7 +65,6 @@ body{background:#0a0a0f;color:#e8e8e8;font-family:'Noto Sans KR',sans-serif;line
 <div><div class="label">유효기간</div><div class="value">당월 말일</div></div>
 </div>
 
-<!-- 차량 정보 -->
 <div class="section-title"><span class="icon">🚗</span><h2>VEHICLE INFORMATION</h2></div>
 <div class="card">
 <div class="card-header">
@@ -93,53 +81,33 @@ body{background:#0a0a0f;color:#e8e8e8;font-family:'Noto Sans KR',sans-serif;line
 <div class="row"><span class="label">총 차량가격</span><span class="value highlight">83,460,000</span></div>
 </div>
 
-<!-- 등록비용 -->
 <div class="section-title"><span class="icon">🪪</span><h2>REGISTRATION COST</h2></div>
 <div class="card">
 <div class="card-header">
 <div class="model-badge">등록비용</div>
-<div class="model-name">취득세 + 공채 + 부대비용</div>
+<div class="model-name">공채 할인 기준</div>
 </div>
 <div class="row"><span class="label">등록세</span><span class="value">3,793,630</span></div>
 <div class="row"><span class="label">취득세</span><span class="value">1,517,450</span></div>
 <div class="row"><span class="label">등록부대비용</span><span class="value">100,000</span></div>
 <div class="divider"></div>
-<div class="row"><span class="label">공채금액 (매입시)</span><span class="value">6,069,818</span></div>
-<div class="row"><span class="label">공채금액 (할인시)</span><span class="value">0</span></div>
-<div class="divider"></div>
-<div class="bond-note">
-<div class="bond-box">
-<div class="label">공채 매입 시 합계</div>
-<div class="value">11,480,898</div>
-</div>
-<div class="bond-box">
-<div class="label">공채 할인 시 합계</div>
-<div class="value">5,411,080</div>
-</div>
-</div>
+<div class="row"><span class="label">등록비용 합계</span><span class="value highlight">5,411,080</span></div>
 </div>
 
-<!-- 최종 견적 (현금) -->
 <div class="section-title"><span class="icon">💰</span><h2>TOTAL COST — CASH</h2></div>
 <div class="card">
 <div class="card-header">
 <div class="model-badge">현금 일시불</div>
 <div class="model-name">최종 견적 (인수조건)</div>
 </div>
-<div class="row"><span class="label">지불 방법</span><span class="value">현금 일시불</span></div>
+<div class="row"><span class="label">총 차량가격</span><span class="value">83,460,000</span></div>
+<div class="row"><span class="label">등록비용</span><span class="value">5,411,080</span></div>
 </div>
 
-<div class="summary-grid">
-<div class="summary-box initial">
-<div class="label">💰 공채 매입 시 총비용</div>
-<div class="amount">94,940,898원</div>
-<div class="sub">차량가 83,460,000 + 등록비 11,480,898</div>
-</div>
-<div class="summary-box monthly">
-<div class="label">💰 공채 할인 시 총비용</div>
+<div class="summary-box-single">
+<div class="label">💰 차량구입 총비용 (공채할인 기준)</div>
 <div class="amount">88,871,080원</div>
-<div class="sub">차량가 83,460,000 + 등록비 5,411,080</div>
-</div>
+<div class="sub">현금 일시불 · 공채 할인 적용</div>
 </div>
 
 <div class="landing-banner">
