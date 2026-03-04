@@ -36,7 +36,6 @@
   .sales-info { text-align: right; font-size: 11px; color: #888; line-height: 1.6; }
   .sales-info strong { color: #c9a84c; display: block; font-size: 13px; }
 
-  /* 차량정보 - 공통 */
   .card {
     background: #13131a; border: 1px solid #2a2a35; border-radius: 10px;
     margin: 12px 0; overflow: hidden;
@@ -61,85 +60,130 @@
   .row.discount .val { color: #e05555; }
 
   /* 비교 그리드 */
+  .compare-wrap {
+    background: #13131a; border: 1px solid #2a2a35;
+    border-radius: 0 0 10px 10px;
+    padding: 12px; margin-bottom: 12px;
+  }
   .compare-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 10px;
-    margin: 12px 0;
   }
-  .compare-card {
-    background: #13131a; border-radius: 10px; overflow: hidden;
-  }
+  .compare-card { border-radius: 10px; overflow: hidden; }
   .compare-card.mercedes { border: 1px solid #3a3a50; }
-  .compare-card.benzdream { border: 2px solid #c9a84c; }
+  .compare-card.orix { border: 2px solid #c9a84c; }
   .compare-header {
     padding: 12px 14px 10px;
     text-align: center;
     border-bottom: 1px solid #2a2a35;
   }
   .compare-card.mercedes .compare-header { background: linear-gradient(135deg, #1a1a28, #111118); }
-  .compare-card.benzdream .compare-header { background: linear-gradient(135deg, #1f1a08, #111108); }
-  .compare-header .ch-badge {
-    display: inline-block;
-    font-size: 9px;
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 700;
-    letter-spacing: 1px;
-    padding: 2px 8px;
-    border-radius: 20px;
-    margin-bottom: 6px;
+  .compare-card.orix .compare-header { background: linear-gradient(135deg, #1f1a08, #111108); }
+  .ch-badge {
+    display: inline-block; font-size: 9px;
+    font-family: 'Montserrat', sans-serif; font-weight: 700;
+    letter-spacing: 1px; padding: 2px 8px; border-radius: 20px; margin-bottom: 6px;
   }
   .compare-card.mercedes .ch-badge { background: #2a2a40; color: #9090c0; }
-  .compare-card.benzdream .ch-badge { background: #3a2a08; color: #c9a84c; }
-  .compare-header .ch-title {
-    font-size: 13px;
-    font-weight: 700;
-    color: #e8e0d0;
-  }
-  .compare-card.benzdream .ch-title { color: #c9a84c; }
+  .compare-card.orix .ch-badge { background: #3a2a08; color: #c9a84c; }
+  .ch-title { font-size: 13px; font-weight: 700; }
+  .compare-card.mercedes .ch-title { color: #e8e0d0; }
+  .compare-card.orix .ch-title { color: #c9a84c; }
+
   .compare-row {
     display: flex; justify-content: space-between; align-items: center;
     padding: 9px 14px; border-bottom: 1px solid #1e1e28;
+    background: #13131a;
   }
   .compare-row:last-child { border-bottom: none; }
+  .compare-row.h { background: #1a1a24; }
+  .compare-card.orix .compare-row.h { background: #1f1a08; }
   .compare-row .ck { font-size: 10px; color: #666; }
   .compare-row .cv { font-size: 12px; font-weight: 500; color: #e8e0d0; }
-  .compare-row.ctotal .ck { font-size: 11px; color: #c9a84c; font-weight: 700; }
-  .compare-row.ctotal .cv { font-size: 14px; color: #c9a84c; font-weight: 700; }
-  .compare-row.highlight-row { background: #1a1a24; }
-  .compare-card.benzdream .compare-row.highlight-row { background: #1f1a08; }
+  .compare-row.ctotal { background: #111118; }
+  .compare-card.orix .compare-row.ctotal { background: #14110a; }
+  .compare-row.ctotal .ck { font-size: 11px; color: #aaa; font-weight: 700; }
+  .compare-row.ctotal .cv { font-size: 15px; color: #c9a84c; font-weight: 700; }
+  .compare-card.mercedes .compare-row.ctotal .cv { color: #9090d0; }
 
-  /* 핵심요약 비교 */
-  .summary-compare {
+  /* 핵심 요약 박스 */
+  .summary-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 10px;
     margin: 12px 0;
   }
-  .sum-col { display: flex; flex-direction: column; gap: 8px; }
-  .sum-col .col-label {
-    text-align: center; font-size: 10px; font-family: 'Montserrat', sans-serif;
-    font-weight: 700; letter-spacing: 1px; padding: 5px;
-    border-radius: 6px;
+  .sum-card {
+    border-radius: 10px; padding: 18px 16px; text-align: center;
   }
-  .sum-col.mb .col-label { background: #2a2a40; color: #9090c0; }
-  .sum-col.bd .col-label { background: #3a2a08; color: #c9a84c; }
-  .sum-box {
-    border-radius: 10px; padding: 14px 12px; text-align: center;
+  .sum-card.blue {
+    background: linear-gradient(135deg, #10101e, #0a0a16);
+    border: 1px solid #3a3a60;
   }
-  .sum-box.red { background: linear-gradient(135deg, #2a1010, #1a0a0a); border: 1px solid #5a2020; }
-  .sum-box.gold { background: linear-gradient(135deg, #1f1a08, #12100a); border: 1px solid #5a4010; }
-  .sum-box.red-dim { background: linear-gradient(135deg, #1e1018, #130a12); border: 1px solid #3a1a1a; }
-  .sum-box.gold-dim { background: linear-gradient(135deg, #181408, #10100a); border: 1px solid #3a3010; }
-  .sum-box .sb-label { font-size: 9px; color: #666; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 4px; }
-  .sum-box.red .sb-label { color: #e08080; }
-  .sum-box.gold .sb-label { color: #c9a84c; }
-  .sum-box .sb-value { font-family: 'Montserrat', sans-serif; font-size: 18px; font-weight: 700; }
-  .sum-box.red .sb-value { color: #ff6b6b; }
-  .sum-box.gold .sb-value { color: #c9a84c; }
-  .sum-box.red-dim .sb-value { color: #c05050; }
-  .sum-box.gold-dim .sb-value { color: #a08030; }
-  .sum-box .sb-sub { font-size: 9px; color: #444; margin-top: 3px; }
+  .sum-card.gold {
+    background: linear-gradient(135deg, #1f1a08, #12100a);
+    border: 2px solid #c9a84c;
+  }
+  .sum-card .s-badge {
+    display: inline-block; font-size: 9px; font-family: 'Montserrat', sans-serif;
+    font-weight: 700; letter-spacing: 1px; padding: 2px 10px; border-radius: 20px; margin-bottom: 10px;
+  }
+  .sum-card.blue .s-badge { background: #2a2a40; color: #8080c0; }
+  .sum-card.gold .s-badge { background: #3a2a08; color: #c9a84c; }
+  .sum-card .s-label { font-size: 10px; color: #666; margin-bottom: 4px; }
+  .sum-card.gold .s-label { color: #a08040; }
+  .sum-card .s-value {
+    font-family: 'Montserrat', sans-serif; font-size: 26px; font-weight: 700; line-height: 1.1;
+  }
+  .sum-card.blue .s-value { color: #8080c0; }
+  .sum-card.gold .s-value { color: #c9a84c; }
+  .sum-card .s-unit { font-size: 12px; font-weight: 400; }
+  .sum-card .s-sub { font-size: 10px; color: #555; margin-top: 6px; }
+  .sum-card.gold .s-sub { color: #7a6030; }
+
+  /* 선택 포인트 */
+  .keypoint {
+    background: #13131a; border: 1px solid #2a2a35; border-radius: 10px;
+    margin: 12px 0; overflow: hidden;
+  }
+  .keypoint-header {
+    background: linear-gradient(135deg, #1a1a24, #0f0f18);
+    border-bottom: 1px solid #2a2a35; padding: 12px 20px;
+    display: flex; align-items: center; gap: 8px;
+    font-size: 12px; font-weight: 700; color: #c9a84c; letter-spacing: 1px;
+  }
+  .keypoint-body {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 0;
+  }
+  .kp-col {
+    padding: 16px 18px;
+  }
+  .kp-col:first-child { border-right: 1px solid #2a2a35; }
+  .kp-col-title {
+    font-size: 11px; font-weight: 700; margin-bottom: 12px; padding-bottom: 8px;
+    border-bottom: 1px solid #2a2a35;
+  }
+  .kp-col:first-child .kp-col-title { color: #c9a84c; }
+  .kp-col:last-child .kp-col-title { color: #9090c0; }
+  .kp-item {
+    display: flex; align-items: flex-start; gap: 8px;
+    margin-bottom: 10px; font-size: 11px; line-height: 1.5; color: #ccc;
+  }
+  .kp-item:last-child { margin-bottom: 0; }
+  .kp-check {
+    width: 16px; height: 16px; border-radius: 3px;
+    display: flex; align-items: center; justify-content: center;
+    flex-shrink: 0; margin-top: 1px; font-size: 9px;
+  }
+  .kp-col:first-child .kp-check { background: #2a5a2a; color: #6dd46d; }
+  .kp-col:last-child .kp-check { background: #2a2a5a; color: #6d6dd4; }
+  .kp-star {
+    width: 16px; height: 16px; display: flex; align-items: center;
+    justify-content: center; flex-shrink: 0; margin-top: 1px; font-size: 12px;
+  }
+  .kp-item-text { flex: 1; }
+  .kp-item-text .sub { font-size: 10px; color: #555; display: block; margin-top: 1px; }
 
   .include-box {
     background: #0f0f16; border: 1px solid #2a2a35; border-radius: 8px;
@@ -150,15 +194,13 @@
 
   .landing-banner { margin: 20px 0 12px; border-radius: 10px; overflow: hidden; border: 1px solid #2a2a35; }
   .landing-banner a img { width: 100%; display: block; }
-
   .footer { text-align: center; padding: 20px 0 10px; font-size: 10px; color: #333; letter-spacing: 1px; }
   .footer .brand { color: #c9a84c; font-family: 'Montserrat', sans-serif; font-weight: 600; font-size: 12px; margin-bottom: 4px; }
   .divider { height: 1px; background: linear-gradient(90deg, transparent, #2a2a35, transparent); margin: 8px 0; }
 
   @media (max-width: 480px) {
-    .compare-header .ch-title { font-size: 11px; }
-    .compare-row .cv { font-size: 11px; }
-    .sum-box .sb-value { font-size: 15px; }
+    .sum-card .s-value { font-size: 20px; }
+    .kp-col { padding: 12px 12px; }
   }
 </style>
 </head>
@@ -213,12 +255,8 @@
 
   <!-- 등록비용 공통 -->
   <div class="card">
-    <div class="card-header"><span class="icon">🪪</span><span class="label">등록 비용</span></div>
+    <div class="card-header"><span class="icon">🪪</span><span class="label">등록 비용 (서울 기준)</span></div>
     <div class="card-body">
-      <div class="row">
-        <span class="key">등록지역</span>
-        <span class="val">서울</span>
-      </div>
       <div class="row">
         <span class="key">취득세 (7%)</span>
         <span class="val">7,515,450 원</span>
@@ -238,119 +276,148 @@
     </div>
   </div>
 
-  <!-- 할부 비교 -->
+  <!-- 할부비교 헤더 -->
   <div class="card-header" style="border-radius:10px 10px 0 0; border:1px solid #2a2a35; margin-top:12px;">
     <span class="icon">💳</span>
     <span class="label">할부 금융 비교</span>
   </div>
-  <div class="compare-grid" style="margin-top:0; border:1px solid #2a2a35; border-top:none; border-radius:0 0 10px 10px; padding:12px; background:#13131a;">
-    <!-- 메르세데스벤츠파이낸셜 -->
-    <div class="compare-card mercedes">
-      <div class="compare-header">
-        <div class="ch-badge">MERCEDES-BENZ FINANCIAL</div>
-        <div class="ch-title">벤츠 파이낸셜</div>
+  <div class="compare-wrap">
+    <div class="compare-grid">
+      <!-- 오릭스캐피탈 -->
+      <div class="compare-card orix">
+        <div class="compare-header">
+          <div class="ch-badge">✦ RECOMMENDED</div>
+          <div class="ch-title">오릭스캐피탈</div>
+        </div>
+        <div class="compare-row">
+          <span class="ck">선납금 (42%)</span>
+          <span class="cv">50,000,000 원</span>
+        </div>
+        <div class="compare-row">
+          <span class="ck">할부원금</span>
+          <span class="cv">68,100,000 원</span>
+        </div>
+        <div class="compare-row">
+          <span class="ck">할부기간</span>
+          <span class="cv">60 개월</span>
+        </div>
+        <div class="compare-row h">
+          <span class="ck">이자율</span>
+          <span class="cv">5.76 %</span>
+        </div>
+        <div class="compare-row">
+          <span class="ck">인지대</span>
+          <span class="cv">70,000 원</span>
+        </div>
+        <div class="compare-row">
+          <span class="ck">설정료</span>
+          <span class="cv">0 원</span>
+        </div>
+        <div class="compare-row ctotal">
+          <span class="ck">월 납입금</span>
+          <span class="cv">1,309,100 원</span>
+        </div>
       </div>
-      <div class="compare-row">
-        <span class="ck">선납금 (42.337%)</span>
-        <span class="cv">50,000,000 원</span>
-      </div>
-      <div class="compare-row">
-        <span class="ck">마일리지</span>
-        <span class="cv">20,000 km</span>
-      </div>
-      <div class="compare-row">
-        <span class="ck">할부원금</span>
-        <span class="cv">68,100,000 원</span>
-      </div>
-      <div class="compare-row">
-        <span class="ck">할부기간</span>
-        <span class="cv">60 개월</span>
-      </div>
-      <div class="compare-row highlight-row">
-        <span class="ck">이자율</span>
-        <span class="cv">6.4798 %</span>
-      </div>
-      <div class="compare-row">
-        <span class="ck">인지대</span>
-        <span class="cv">70,000 원</span>
-      </div>
-      <div class="compare-row">
-        <span class="ck">설정료</span>
-        <span class="cv">0 원</span>
-      </div>
-      <div class="compare-row ctotal">
-        <span class="ck">월 납입금</span>
-        <span class="cv">1,331,810 원</span>
-      </div>
-    </div>
 
-    <!-- 제휴금융 -->
-    <div class="compare-card benzdream">
-      <div class="compare-header">
-        <div class="ch-badge">✦ RECOMMENDED</div>
-        <div class="ch-title">제휴 금융</div>
-      </div>
-      <div class="compare-row">
-        <span class="ck">선납금 (42%)</span>
-        <span class="cv">50,000,000 원</span>
-      </div>
-      <div class="compare-row">
-        <span class="ck">마일리지</span>
-        <span class="cv">—</span>
-      </div>
-      <div class="compare-row">
-        <span class="ck">할부원금</span>
-        <span class="cv">68,100,000 원</span>
-      </div>
-      <div class="compare-row">
-        <span class="ck">할부기간</span>
-        <span class="cv">60 개월</span>
-      </div>
-      <div class="compare-row highlight-row">
-        <span class="ck">이자율</span>
-        <span class="cv">5.76 %</span>
-      </div>
-      <div class="compare-row">
-        <span class="ck">인지대</span>
-        <span class="cv">70,000 원</span>
-      </div>
-      <div class="compare-row">
-        <span class="ck">설정료</span>
-        <span class="cv">0 원</span>
-      </div>
-      <div class="compare-row ctotal">
-        <span class="ck">월 납입금</span>
-        <span class="cv">1,309,100 원</span>
+      <!-- 벤츠파이낸셜 -->
+      <div class="compare-card mercedes">
+        <div class="compare-header">
+          <div class="ch-badge">MERCEDES-BENZ FINANCIAL</div>
+          <div class="ch-title">벤츠파이낸셜</div>
+        </div>
+        <div class="compare-row">
+          <span class="ck">선납금 (42.337%)</span>
+          <span class="cv">50,000,000 원</span>
+        </div>
+        <div class="compare-row">
+          <span class="ck">할부원금</span>
+          <span class="cv">68,100,000 원</span>
+        </div>
+        <div class="compare-row">
+          <span class="ck">할부기간</span>
+          <span class="cv">60 개월</span>
+        </div>
+        <div class="compare-row h">
+          <span class="ck">이자율</span>
+          <span class="cv">6.4798 %</span>
+        </div>
+        <div class="compare-row">
+          <span class="ck">인지대</span>
+          <span class="cv">70,000 원</span>
+        </div>
+        <div class="compare-row">
+          <span class="ck">설정료</span>
+          <span class="cv">0 원</span>
+        </div>
+        <div class="compare-row ctotal">
+          <span class="ck">월 납입금</span>
+          <span class="cv">1,331,810 원</span>
+        </div>
       </div>
     </div>
   </div>
 
-  <!-- 핵심 요약 비교 -->
-  <div class="summary-compare">
-    <div class="sum-col mb">
-      <div class="col-label">MERCEDES FINANCIAL</div>
-      <div class="sum-box red-dim">
-        <div class="sb-label">초기 부담액</div>
-        <div class="sb-value">5,792<span style="font-size:11px">만</span></div>
-        <div class="sb-sub">선납금+등록비+인지대</div>
-      </div>
-      <div class="sum-box gold-dim">
-        <div class="sb-label">월 납입금</div>
-        <div class="sb-value">133<span style="font-size:11px">만</span></div>
-        <div class="sb-sub">60개월 / 6.4798%</div>
-      </div>
+  <!-- 월납입금 핵심 요약 -->
+  <div class="summary-grid">
+    <div class="sum-card gold">
+      <div class="s-badge">✦ 오릭스캐피탈</div>
+      <div class="s-label">월 납입금</div>
+      <div class="s-value">1,309,100<span class="s-unit"> 원</span></div>
+      <div class="s-sub">이자율 5.76% · 60개월<br>60개월 총 이자 약 <strong style="color:#c9a84c">1,454만원</strong></div>
     </div>
-    <div class="sum-col bd">
-      <div class="col-label">✦ 제휴 금융 추천</div>
-      <div class="sum-box red">
-        <div class="sb-label">초기 부담액</div>
-        <div class="sb-value">5,797<span style="font-size:11px">만</span></div>
-        <div class="sb-sub">선납금+등록비+인지대</div>
+    <div class="sum-card blue">
+      <div class="s-badge">벤츠파이낸셜</div>
+      <div class="s-label">월 납입금</div>
+      <div class="s-value">1,331,810<span class="s-unit"> 원</span></div>
+      <div class="s-sub">이자율 6.4798% · 60개월<br>60개월 총 이자 약 <strong style="color:#8080c0">1,595만원</strong></div>
+    </div>
+  </div>
+
+  <!-- 월차이 강조 -->
+  <div style="background: linear-gradient(135deg, #1a1a10, #111108); border: 1px solid #3a3010; border-radius: 10px; padding: 14px 20px; margin: 0 0 12px; text-align: center;">
+    <div style="font-size: 11px; color: #888; margin-bottom: 4px;">오릭스캐피탈 선택 시</div>
+    <div style="font-family: 'Montserrat', sans-serif; font-size: 20px; font-weight: 700; color: #c9a84c;">
+      월 22,710원 · 60개월 총 약 <span style="font-size:22px">141만원</span> 절감
+    </div>
+    <div style="font-size: 10px; color: #666; margin-top: 4px;">순수 금융비용 최소화</div>
+  </div>
+
+  <!-- 선택 포인트 -->
+  <div class="keypoint">
+    <div class="keypoint-header">⚖️ &nbsp;선택 포인트</div>
+    <div class="keypoint-body">
+      <div class="kp-col">
+        <div class="kp-col-title">오릭스캐피탈</div>
+        <div class="kp-item">
+          <div class="kp-check">✓</div>
+          <div class="kp-item-text">월 23,490원 절감 (실수령 기준)</div>
+        </div>
+        <div class="kp-item">
+          <div class="kp-check">✓</div>
+          <div class="kp-item-text">60개월 총 약 141만원 이자 절약</div>
+        </div>
+        <div class="kp-item">
+          <div class="kp-check">✓</div>
+          <div class="kp-item-text">순수 금융비용 최소화</div>
+        </div>
       </div>
-      <div class="sum-box gold">
-        <div class="sb-label">월 납입금</div>
-        <div class="sb-value">130<span style="font-size:11px">만</span></div>
-        <div class="sb-sub">60개월 / 5.76%</div>
+      <div class="kp-col">
+        <div class="kp-col-title">벤츠파이낸셜</div>
+        <div class="kp-item">
+          <div class="kp-star">⭐</div>
+          <div class="kp-item-text">
+            3년간 신차보상보험 포함
+            <span class="sub">사고 시 동급 신차 교환</span>
+          </div>
+        </div>
+        <div class="kp-item">
+          <div class="kp-check">✓</div>
+          <div class="kp-item-text">메르세데스 공식 금융</div>
+        </div>
+        <div class="kp-item">
+          <div class="kp-check">✓</div>
+          <div class="kp-item-text">브랜드 일체형 서비스</div>
+        </div>
       </div>
     </div>
   </div>
