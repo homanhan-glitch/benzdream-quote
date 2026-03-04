@@ -71,25 +71,21 @@
     gap: 10px;
   }
   .compare-card { border-radius: 10px; overflow: hidden; }
+  .compare-card.orix { border: 1px solid #3a3a50; }
   .compare-card.mercedes { border: 1px solid #3a3a50; }
-  .compare-card.orix { border: 2px solid #c9a84c; }
   .compare-header {
     padding: 12px 14px 10px;
     text-align: center;
     border-bottom: 1px solid #2a2a35;
+    background: linear-gradient(135deg, #1a1a28, #111118);
   }
-  .compare-card.mercedes .compare-header { background: linear-gradient(135deg, #1a1a28, #111118); }
-  .compare-card.orix .compare-header { background: linear-gradient(135deg, #1f1a08, #111108); }
   .ch-badge {
     display: inline-block; font-size: 9px;
     font-family: 'Montserrat', sans-serif; font-weight: 700;
     letter-spacing: 1px; padding: 2px 8px; border-radius: 20px; margin-bottom: 6px;
+    background: #2a2a40; color: #9090c0;
   }
-  .compare-card.mercedes .ch-badge { background: #2a2a40; color: #9090c0; }
-  .compare-card.orix .ch-badge { background: #3a2a08; color: #c9a84c; }
-  .ch-title { font-size: 13px; font-weight: 700; }
-  .compare-card.mercedes .ch-title { color: #e8e0d0; }
-  .compare-card.orix .ch-title { color: #c9a84c; }
+  .ch-title { font-size: 13px; font-weight: 700; color: #e8e0d0; }
 
   .compare-row {
     display: flex; justify-content: space-between; align-items: center;
@@ -98,16 +94,13 @@
   }
   .compare-row:last-child { border-bottom: none; }
   .compare-row.h { background: #1a1a24; }
-  .compare-card.orix .compare-row.h { background: #1f1a08; }
   .compare-row .ck { font-size: 10px; color: #666; }
   .compare-row .cv { font-size: 12px; font-weight: 500; color: #e8e0d0; }
   .compare-row.ctotal { background: #111118; }
-  .compare-card.orix .compare-row.ctotal { background: #14110a; }
   .compare-row.ctotal .ck { font-size: 11px; color: #aaa; font-weight: 700; }
   .compare-row.ctotal .cv { font-size: 15px; color: #c9a84c; font-weight: 700; }
-  .compare-card.mercedes .compare-row.ctotal .cv { color: #9090d0; }
 
-  /* 핵심 요약 박스 */
+  /* 월납입금 나란히 요약 */
   .summary-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -116,31 +109,20 @@
   }
   .sum-card {
     border-radius: 10px; padding: 18px 16px; text-align: center;
-  }
-  .sum-card.blue {
-    background: linear-gradient(135deg, #10101e, #0a0a16);
-    border: 1px solid #3a3a60;
-  }
-  .sum-card.gold {
-    background: linear-gradient(135deg, #1f1a08, #12100a);
-    border: 2px solid #c9a84c;
+    background: #13131a; border: 1px solid #2a2a35;
   }
   .sum-card .s-badge {
     display: inline-block; font-size: 9px; font-family: 'Montserrat', sans-serif;
-    font-weight: 700; letter-spacing: 1px; padding: 2px 10px; border-radius: 20px; margin-bottom: 10px;
+    font-weight: 700; letter-spacing: 1px; padding: 2px 10px; border-radius: 20px;
+    margin-bottom: 10px; background: #2a2a40; color: #9090c0;
   }
-  .sum-card.blue .s-badge { background: #2a2a40; color: #8080c0; }
-  .sum-card.gold .s-badge { background: #3a2a08; color: #c9a84c; }
-  .sum-card .s-label { font-size: 10px; color: #666; margin-bottom: 4px; }
-  .sum-card.gold .s-label { color: #a08040; }
+  .sum-card .s-label { font-size: 10px; color: #666; margin-bottom: 6px; }
   .sum-card .s-value {
-    font-family: 'Montserrat', sans-serif; font-size: 26px; font-weight: 700; line-height: 1.1;
+    font-family: 'Montserrat', sans-serif; font-size: 22px; font-weight: 700;
+    color: #c9a84c; line-height: 1.1;
   }
-  .sum-card.blue .s-value { color: #8080c0; }
-  .sum-card.gold .s-value { color: #c9a84c; }
-  .sum-card .s-unit { font-size: 12px; font-weight: 400; }
+  .sum-card .s-unit { font-size: 12px; font-weight: 400; color: #888; }
   .sum-card .s-sub { font-size: 10px; color: #555; margin-top: 6px; }
-  .sum-card.gold .s-sub { color: #7a6030; }
 
   /* 선택 포인트 */
   .keypoint {
@@ -154,18 +136,14 @@
     font-size: 12px; font-weight: 700; color: #c9a84c; letter-spacing: 1px;
   }
   .keypoint-body {
-    display: grid; grid-template-columns: 1fr 1fr; gap: 0;
+    display: grid; grid-template-columns: 1fr 1fr;
   }
-  .kp-col {
-    padding: 16px 18px;
-  }
+  .kp-col { padding: 16px 18px; }
   .kp-col:first-child { border-right: 1px solid #2a2a35; }
   .kp-col-title {
     font-size: 11px; font-weight: 700; margin-bottom: 12px; padding-bottom: 8px;
-    border-bottom: 1px solid #2a2a35;
+    border-bottom: 1px solid #2a2a35; color: #aaa;
   }
-  .kp-col:first-child .kp-col-title { color: #c9a84c; }
-  .kp-col:last-child .kp-col-title { color: #9090c0; }
   .kp-item {
     display: flex; align-items: flex-start; gap: 8px;
     margin-bottom: 10px; font-size: 11px; line-height: 1.5; color: #ccc;
@@ -175,14 +153,12 @@
     width: 16px; height: 16px; border-radius: 3px;
     display: flex; align-items: center; justify-content: center;
     flex-shrink: 0; margin-top: 1px; font-size: 9px;
+    background: #2a3a2a; color: #6dd46d;
   }
-  .kp-col:first-child .kp-check { background: #2a5a2a; color: #6dd46d; }
-  .kp-col:last-child .kp-check { background: #2a2a5a; color: #6d6dd4; }
   .kp-star {
     width: 16px; height: 16px; display: flex; align-items: center;
     justify-content: center; flex-shrink: 0; margin-top: 1px; font-size: 12px;
   }
-  .kp-item-text { flex: 1; }
   .kp-item-text .sub { font-size: 10px; color: #555; display: block; margin-top: 1px; }
 
   .include-box {
@@ -199,8 +175,8 @@
   .divider { height: 1px; background: linear-gradient(90deg, transparent, #2a2a35, transparent); margin: 8px 0; }
 
   @media (max-width: 480px) {
-    .sum-card .s-value { font-size: 20px; }
-    .kp-col { padding: 12px 12px; }
+    .sum-card .s-value { font-size: 18px; }
+    .kp-col { padding: 12px; }
   }
 </style>
 </head>
@@ -276,17 +252,17 @@
     </div>
   </div>
 
-  <!-- 할부비교 헤더 -->
+  <!-- 할부비교 -->
   <div class="card-header" style="border-radius:10px 10px 0 0; border:1px solid #2a2a35; margin-top:12px;">
     <span class="icon">💳</span>
     <span class="label">할부 금융 비교</span>
   </div>
   <div class="compare-wrap">
     <div class="compare-grid">
-      <!-- 오릭스캐피탈 -->
+
       <div class="compare-card orix">
         <div class="compare-header">
-          <div class="ch-badge">✦ RECOMMENDED</div>
+          <div class="ch-badge">제휴 금융</div>
           <div class="ch-title">오릭스캐피탈</div>
         </div>
         <div class="compare-row">
@@ -319,7 +295,6 @@
         </div>
       </div>
 
-      <!-- 벤츠파이낸셜 -->
       <div class="compare-card mercedes">
         <div class="compare-header">
           <div class="ch-badge">MERCEDES-BENZ FINANCIAL</div>
@@ -354,32 +329,24 @@
           <span class="cv">1,331,810 원</span>
         </div>
       </div>
+
     </div>
   </div>
 
-  <!-- 월납입금 핵심 요약 -->
+  <!-- 월납입금 요약 -->
   <div class="summary-grid">
-    <div class="sum-card gold">
-      <div class="s-badge">✦ 오릭스캐피탈</div>
+    <div class="sum-card">
+      <div class="s-badge">오릭스캐피탈</div>
       <div class="s-label">월 납입금</div>
       <div class="s-value">1,309,100<span class="s-unit"> 원</span></div>
-      <div class="s-sub">이자율 5.76% · 60개월<br>60개월 총 이자 약 <strong style="color:#c9a84c">1,454만원</strong></div>
+      <div class="s-sub">이자율 5.76% · 60개월</div>
     </div>
-    <div class="sum-card blue">
+    <div class="sum-card">
       <div class="s-badge">벤츠파이낸셜</div>
       <div class="s-label">월 납입금</div>
       <div class="s-value">1,331,810<span class="s-unit"> 원</span></div>
-      <div class="s-sub">이자율 6.4798% · 60개월<br>60개월 총 이자 약 <strong style="color:#8080c0">1,595만원</strong></div>
+      <div class="s-sub">이자율 6.4798% · 60개월</div>
     </div>
-  </div>
-
-  <!-- 월차이 강조 -->
-  <div style="background: linear-gradient(135deg, #1a1a10, #111108); border: 1px solid #3a3010; border-radius: 10px; padding: 14px 20px; margin: 0 0 12px; text-align: center;">
-    <div style="font-size: 11px; color: #888; margin-bottom: 4px;">오릭스캐피탈 선택 시</div>
-    <div style="font-family: 'Montserrat', sans-serif; font-size: 20px; font-weight: 700; color: #c9a84c;">
-      월 22,710원 · 60개월 총 약 <span style="font-size:22px">141만원</span> 절감
-    </div>
-    <div style="font-size: 10px; color: #666; margin-top: 4px;">순수 금융비용 최소화</div>
   </div>
 
   <!-- 선택 포인트 -->
@@ -390,11 +357,7 @@
         <div class="kp-col-title">오릭스캐피탈</div>
         <div class="kp-item">
           <div class="kp-check">✓</div>
-          <div class="kp-item-text">월 23,490원 절감 (실수령 기준)</div>
-        </div>
-        <div class="kp-item">
-          <div class="kp-check">✓</div>
-          <div class="kp-item-text">60개월 총 약 141만원 이자 절약</div>
+          <div class="kp-item-text">월 23,490원 절감</div>
         </div>
         <div class="kp-item">
           <div class="kp-check">✓</div>
