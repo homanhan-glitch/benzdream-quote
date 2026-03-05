@@ -9,31 +9,24 @@
 *{margin:0;padding:0;box-sizing:border-box;}
 body{background:#0a0a0f;color:#e0e0e0;font-family:'Noto Sans KR',sans-serif;min-height:100vh;-webkit-font-smoothing:antialiased;}
 .container{max-width:960px;margin:0 auto;padding:16px;}
-
 .banner{width:100%;border-radius:12px;overflow:hidden;margin-bottom:24px;}
 .banner img{width:100%;display:block;}
-
 .header{text-align:center;margin-bottom:28px;padding:20px 0;}
 .header .date{color:#888;font-size:13px;letter-spacing:1px;font-family:'Montserrat',sans-serif;}
 .header h1{font-family:'Playfair Display',serif;font-size:28px;color:#c9a84c;margin:8px 0 4px;letter-spacing:1px;}
 .header .subtitle{font-size:14px;color:#aaa;font-weight:300;}
 .header .quote-no{font-size:11px;color:#666;margin-top:8px;font-family:'Montserrat',sans-serif;}
-
 .customer-bar{display:flex;justify-content:space-between;align-items:center;background:linear-gradient(135deg,#1a1a2e,#16213e);border:1px solid #c9a84c33;border-radius:10px;padding:14px 24px;margin-bottom:24px;}
 .customer-bar .name{font-size:18px;font-weight:700;color:#fff;}
 .customer-bar .name span{color:#c9a84c;}
 .customer-bar .advisor{font-size:13px;color:#aaa;}
-
 .card{background:linear-gradient(135deg,#12121a,#1a1a2e);border:1px solid #ffffff12;border-radius:12px;padding:20px;margin-bottom:20px;}
 .card-title{display:flex;align-items:center;gap:8px;font-size:16px;font-weight:700;color:#c9a84c;margin-bottom:16px;padding-bottom:10px;border-bottom:1px solid #c9a84c22;}
-
 .vehicle-info{display:grid;grid-template-columns:1fr 1fr;gap:10px;}
 .vehicle-info .item{display:flex;justify-content:space-between;padding:8px 12px;background:#ffffff06;border-radius:6px;}
 .vehicle-info .item .label{color:#888;font-size:13px;}
 .vehicle-info .item .value{font-weight:600;font-size:14px;color:#fff;}
 .vehicle-info .item.highlight .value{color:#c9a84c;font-weight:700;}
-.vehicle-info .item.full{grid-column:1/-1;}
-
 .reg-cost{display:grid;grid-template-columns:1fr 1fr;gap:8px;}
 .reg-cost .item{display:flex;justify-content:space-between;padding:8px 12px;background:#ffffff06;border-radius:6px;}
 .reg-cost .item .label{color:#888;font-size:13px;}
@@ -41,23 +34,37 @@ body{background:#0a0a0f;color:#e0e0e0;font-family:'Noto Sans KR',sans-serif;min-
 .reg-cost .item.total{background:#c9a84c15;border:1px solid #c9a84c33;}
 .reg-cost .item.total .label{color:#c9a84c;font-weight:700;}
 .reg-cost .item.total .value{color:#c9a84c;font-weight:700;}
-.reg-cost .item.full{grid-column:1/-1;}
 
-/* Comparison Table */
-.compare-section{margin-bottom:20px;}
-.compare-section h2{text-align:center;font-size:20px;color:#c9a84c;margin-bottom:6px;font-family:'Playfair Display',serif;}
-.compare-section .desc{text-align:center;font-size:13px;color:#888;margin-bottom:20px;}
+/* Section headers */
+.section-header{text-align:center;margin:32px 0 20px;}
+.section-header h2{font-size:20px;color:#c9a84c;font-family:'Playfair Display',serif;margin-bottom:6px;}
+.section-header .desc{font-size:13px;color:#888;}
+.section-divider{display:flex;align-items:center;gap:12px;margin:32px 0 20px;}
+.section-divider .line{flex:1;height:1px;background:linear-gradient(90deg,transparent,#c9a84c44,transparent);}
+.section-divider .tag{background:#c9a84c;color:#0a0a0f;font-size:11px;font-weight:700;padding:4px 14px;border-radius:20px;letter-spacing:1px;font-family:'Montserrat',sans-serif;white-space:nowrap;}
 
-.compare-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;}
-@media(max-width:700px){.compare-grid{grid-template-columns:repeat(2,1fr);}}
+/* Compare grid */
+.compare-grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-bottom:12px;}
+.compare-grid-2{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;max-width:640px;margin:0 auto 12px;}
+@media(max-width:700px){
+.compare-grid-3{grid-template-columns:1fr;}
+.compare-grid-2{grid-template-columns:1fr;max-width:100%;}
+}
 
 .option-card{background:linear-gradient(135deg,#12121a,#1a1a2e);border:1px solid #ffffff15;border-radius:12px;padding:18px 14px;text-align:center;transition:all .3s;position:relative;overflow:hidden;}
 .option-card:hover{border-color:#c9a84c55;transform:translateY(-2px);box-shadow:0 8px 30px #c9a84c15;}
+.option-card.mbfsk{border-color:#2a6b3a55;background:linear-gradient(135deg,#0e1a12,#12261a);}
+.option-card.mbfsk:hover{border-color:#4CAF5088;box-shadow:0 8px 30px #4CAF5015;}
 .option-card.recommended{border-color:#c9a84c88;}
 .option-card.recommended::before{content:'BEST';position:absolute;top:10px;right:-28px;background:#c9a84c;color:#0a0a0f;font-size:10px;font-weight:700;padding:2px 30px;transform:rotate(45deg);letter-spacing:1px;font-family:'Montserrat',sans-serif;}
 
 .option-label{font-size:13px;color:#888;font-family:'Montserrat',sans-serif;letter-spacing:2px;margin-bottom:4px;}
 .option-name{font-size:15px;font-weight:700;color:#fff;margin-bottom:14px;}
+
+.badge-row{display:flex;justify-content:center;gap:6px;margin-bottom:12px;flex-wrap:wrap;}
+.badge{font-size:10px;padding:3px 8px;border-radius:4px;font-weight:600;letter-spacing:0.5px;}
+.badge.green{background:#4CAF5022;color:#4CAF50;border:1px solid #4CAF5044;}
+.badge.gray{background:#ffffff08;color:#777;border:1px solid #ffffff15;}
 
 .option-detail{margin-bottom:8px;padding:6px 0;border-bottom:1px solid #ffffff08;}
 .option-detail .dl{color:#777;font-size:11px;margin-bottom:2px;}
@@ -67,27 +74,41 @@ body{background:#0a0a0f;color:#e0e0e0;font-family:'Noto Sans KR',sans-serif;min-
 .option-highlight .monthly-label{font-size:11px;color:#c9a84c;letter-spacing:1px;margin-bottom:4px;}
 .option-highlight .monthly-val{font-size:22px;font-weight:900;color:#c9a84c;font-family:'Montserrat',sans-serif;}
 .option-highlight .monthly-unit{font-size:12px;color:#c9a84c;font-weight:400;}
+.mbfsk .option-highlight{border-top-color:#4CAF5044;}
+.mbfsk .option-highlight .monthly-label{color:#4CAF50;}
+.mbfsk .option-highlight .monthly-val{color:#4CAF50;}
+.mbfsk .option-highlight .monthly-unit{color:#4CAF50;}
 
 .option-initial{margin-top:10px;padding:8px;background:#ff444420;border-radius:6px;border:1px solid #ff444440;}
 .option-initial .il{font-size:10px;color:#ff8888;margin-bottom:2px;}
 .option-initial .iv{font-size:16px;font-weight:700;color:#ff6666;font-family:'Montserrat',sans-serif;}
 
-/* Summary Boxes */
-.summary-row{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:20px;}
+/* MBFSK Benefit Card */
+.benefit-card{background:linear-gradient(135deg,#0e1a12,#12261a);border:1px solid #4CAF5033;border-radius:12px;padding:20px;margin:20px 0;text-align:center;}
+.benefit-card .bc-title{font-size:16px;font-weight:700;color:#4CAF50;margin-bottom:12px;}
+.benefit-card .bc-subtitle{font-size:13px;color:#81C784;margin-bottom:16px;}
+.benefit-items{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;}
+@media(max-width:600px){.benefit-items{grid-template-columns:repeat(2,1fr);}}
+.benefit-item{background:#ffffff06;border-radius:8px;padding:12px 8px;}
+.benefit-item .bi-icon{font-size:22px;margin-bottom:4px;}
+.benefit-item .bi-text{font-size:11px;color:#aaa;line-height:1.4;}
+.benefit-item .bi-text strong{color:#81C784;font-weight:600;}
+
+/* Summary */
+.summary-row{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:20px 0;}
 @media(max-width:500px){.summary-row{grid-template-columns:1fr;}}
 .summary-box{border-radius:10px;padding:18px;text-align:center;}
 .summary-box.red{background:linear-gradient(135deg,#2a1015,#1a0a0e);border:1px solid #ff444440;}
 .summary-box.gold{background:linear-gradient(135deg,#1a1810,#2a2515);border:1px solid #c9a84c55;}
 .summary-box .sb-label{font-size:12px;color:#999;margin-bottom:6px;}
-.summary-box.red .sb-value{font-size:22px;font-weight:900;color:#ff6666;}
-.summary-box.gold .sb-value{font-size:22px;font-weight:900;color:#c9a84c;}
+.summary-box.red .sb-value{font-size:20px;font-weight:900;color:#ff6666;}
+.summary-box.gold .sb-value{font-size:20px;font-weight:900;color:#c9a84c;}
 .summary-box .sb-sub{font-size:11px;color:#777;margin-top:4px;}
 
 .landing-banner{display:block;width:100%;border-radius:10px;overflow:hidden;margin-bottom:20px;text-decoration:none;background:linear-gradient(135deg,#1a1a2e,#0a0a0f);border:1px solid #c9a84c33;padding:16px;text-align:center;transition:all .3s;}
 .landing-banner:hover{border-color:#c9a84c;box-shadow:0 4px 20px #c9a84c22;}
 .landing-banner .lb-title{font-size:15px;font-weight:700;color:#c9a84c;margin-bottom:4px;}
 .landing-banner .lb-sub{font-size:12px;color:#888;}
-
 .footer{text-align:center;padding:20px 0;border-top:1px solid #ffffff08;margin-top:10px;}
 .footer p{font-size:11px;color:#555;line-height:1.8;}
 .footer .brand{color:#c9a84c;font-family:'Playfair Display',serif;font-size:14px;margin-bottom:4px;}
@@ -103,7 +124,7 @@ body{background:#0a0a0f;color:#e0e0e0;font-family:'Noto Sans KR',sans-serif;min-
 <div class="header">
 <div class="date">2026. 03. 05</div>
 <h1>E 200 AMG Line</h1>
-<div class="subtitle">할부 비교견적서 (4가지 옵션)</div>
+<div class="subtitle">할부 비교견적서 · 일반할부 vs 벤츠파이낸셜</div>
 <div class="quote-no">03-Motorone.2026035-57600.01-8678</div>
 </div>
 
@@ -116,7 +137,7 @@ body{background:#0a0a0f;color:#e0e0e0;font-family:'Noto Sans KR',sans-serif;min-
 <div class="card">
 <div class="card-title">🚗 차량 정보</div>
 <div class="vehicle-info">
-<div class="item"><span class="label">모델명</span><span class="value">E 200 AMG Line</span></div>
+<div class="item"><span class="label">모델명</span><span class="value">E 200 AMG Line (26MY)</span></div>
 <div class="item"><span class="label">배기량</span><span class="value">1,999 cc</span></div>
 <div class="item"><span class="label">기본가격</span><span class="value">80,000,000원</span></div>
 <div class="item"><span class="label">옵션가격</span><span class="value">-</span></div>
@@ -125,12 +146,17 @@ body{background:#0a0a0f;color:#e0e0e0;font-family:'Noto Sans KR',sans-serif;min-
 </div>
 </div>
 
-<!-- 등록비용 -->
-<div class="card">
-<div class="card-title">🪪 등록비용</div>
+<!-- ============ 일반할부 섹션 ============ -->
+<div class="section-divider">
+<div class="line"></div>
+<div class="tag">일반 할부 4가지</div>
+<div class="line"></div>
+</div>
+
+<div class="card" style="padding:14px;">
 <div class="reg-cost">
 <div class="item"><span class="label">취득세 (7%)</span><span class="value">4,454,540원</span></div>
-<div class="item"><span class="label">취득원가포함 (0%)</span><span class="value">-</span></div>
+<div class="item"><span class="label">취득원가포함</span><span class="value">-</span></div>
 <div class="item"><span class="label">공채</span><span class="value">763,700원</span></div>
 <div class="item"><span class="label">부대비용</span><span class="value">100,000원</span></div>
 <div class="item total"><span class="label">등록비용계</span><span class="value">5,318,240원</span></div>
@@ -138,71 +164,129 @@ body{background:#0a0a0f;color:#e0e0e0;font-family:'Noto Sans KR',sans-serif;min-
 </div>
 </div>
 
-<!-- 비교 섹션 -->
-<div class="compare-section">
-<h2>💳 할부 옵션 비교</h2>
-<div class="desc">선납금 비율과 할부기간에 따른 4가지 옵션을 비교해보세요</div>
-
-<div class="compare-grid">
+<div class="compare-grid-3" style="grid-template-columns:repeat(4,1fr);">
 
 <!-- Option A -->
 <div class="option-card">
 <div class="option-label">OPTION A</div>
-<div class="option-name">선납 50% · 36개월</div>
+<div class="option-name">선납50% · 36개월</div>
+<div class="badge-row"><span class="badge gray">일반할부</span></div>
 <div class="option-detail"><div class="dl">할부이용금액</div><div class="dv">35,318,240원</div></div>
 <div class="option-detail"><div class="dl">선납금 (50%)</div><div class="dv">34,681,760원</div></div>
 <div class="option-detail"><div class="dl">적용이자율</div><div class="dv">6.09%</div></div>
-<div class="option-initial"><div class="il">고객 초기부담액</div><div class="iv">4,000만원</div></div>
+<div class="option-initial"><div class="il">초기부담액</div><div class="iv">4,000만</div></div>
 <div class="option-highlight"><div class="monthly-label">월 납입금</div><div class="monthly-val">1,075,900<span class="monthly-unit">원</span></div></div>
 </div>
 
 <!-- Option B -->
 <div class="option-card">
 <div class="option-label">OPTION B</div>
-<div class="option-name">선납 57% · 36개월</div>
+<div class="option-name">선납57% · 36개월</div>
+<div class="badge-row"><span class="badge gray">일반할부</span></div>
 <div class="option-detail"><div class="dl">할부이용금액</div><div class="dv">30,000,000원</div></div>
 <div class="option-detail"><div class="dl">선납금 (57%)</div><div class="dv">40,000,000원</div></div>
 <div class="option-detail"><div class="dl">적용이자율</div><div class="dv">6.39%</div></div>
-<div class="option-initial"><div class="il">고객 초기부담액</div><div class="iv">4,531만원</div></div>
+<div class="option-initial"><div class="il">초기부담액</div><div class="iv">4,531만</div></div>
 <div class="option-highlight"><div class="monthly-label">월 납입금</div><div class="monthly-val">918,000<span class="monthly-unit">원</span></div></div>
 </div>
 
 <!-- Option C -->
 <div class="option-card">
 <div class="option-label">OPTION C</div>
-<div class="option-name">선납 57% · 48개월</div>
+<div class="option-name">선납57% · 48개월</div>
+<div class="badge-row"><span class="badge gray">일반할부</span></div>
 <div class="option-detail"><div class="dl">할부이용금액</div><div class="dv">30,000,000원</div></div>
 <div class="option-detail"><div class="dl">선납금 (57%)</div><div class="dv">40,000,000원</div></div>
 <div class="option-detail"><div class="dl">적용이자율</div><div class="dv">6.08%</div></div>
-<div class="option-initial"><div class="il">고객 초기부담액</div><div class="iv">4,531만원</div></div>
+<div class="option-initial"><div class="il">초기부담액</div><div class="iv">4,531만</div></div>
 <div class="option-highlight"><div class="monthly-label">월 납입금</div><div class="monthly-val">705,700<span class="monthly-unit">원</span></div></div>
 </div>
 
 <!-- Option D -->
-<div class="option-card recommended">
+<div class="option-card">
 <div class="option-label">OPTION D</div>
-<div class="option-name">선납 50% · 48개월</div>
+<div class="option-name">선납50% · 48개월</div>
+<div class="badge-row"><span class="badge gray">일반할부</span></div>
 <div class="option-detail"><div class="dl">할부이용금액</div><div class="dv">35,318,240원</div></div>
 <div class="option-detail"><div class="dl">선납금 (50%)</div><div class="dv">34,681,760원</div></div>
 <div class="option-detail"><div class="dl">적용이자율</div><div class="dv">5.78%</div></div>
-<div class="option-initial"><div class="il">고객 초기부담액</div><div class="iv">4,000만원</div></div>
+<div class="option-initial"><div class="il">초기부담액</div><div class="iv">4,000만</div></div>
 <div class="option-highlight"><div class="monthly-label">월 납입금</div><div class="monthly-val">825,900<span class="monthly-unit">원</span></div></div>
 </div>
 
 </div>
+
+<!-- ============ 벤츠파이낸셜 섹션 ============ -->
+<div class="section-divider">
+<div class="line"></div>
+<div class="tag" style="background:#4CAF50;">벤츠파이낸셜 (MBFSK) 2가지</div>
+<div class="line"></div>
+</div>
+
+<!-- 신차교환보험 혜택 -->
+<div class="benefit-card">
+<div class="bc-title">🛡️ 신차교환보상보험 3년 무료 제공</div>
+<div class="bc-subtitle">벤츠파이낸셜 이용 시, 신한EZ손해보험 단체보험 자동 가입</div>
+<div class="benefit-items">
+<div class="benefit-item"><div class="bi-icon">🚗</div><div class="bi-text"><strong>차대차 사고</strong> 시 보상</div></div>
+<div class="benefit-item"><div class="bi-icon">💰</div><div class="bi-text">수리비 <strong>차량가 30%↑</strong></div></div>
+<div class="benefit-item"><div class="bi-icon">👤</div><div class="bi-text">운전자 과실 <strong>50% 이하</strong></div></div>
+<div class="benefit-item"><div class="bi-icon">🔧</div><div class="bi-text">수리 완료 후 <strong>미운행 반납</strong></div></div>
+</div>
+</div>
+
+<div class="card" style="padding:14px;">
+<div class="reg-cost">
+<div class="item"><span class="label">취득세 (7%)</span><span class="value">4,454,540원</span></div>
+<div class="item"><span class="label">공채할인금액</span><span class="value">763,640원</span></div>
+<div class="item"><span class="label">등록부대비용</span><span class="value">90,000원</span></div>
+<div class="item total"><span class="label">등록비용합계</span><span class="value">5,308,180원</span></div>
+<div class="item total"><span class="label">출고전 내실금액</span><span class="value">50,000,000원</span></div>
+<div class="item" style="grid-column:1/-1;"><span class="label">선수금 (63.845%)</span><span class="value">44,691,820원</span></div>
+</div>
+</div>
+
+<div class="compare-grid-2">
+
+<!-- Option E: MBFSK 36 -->
+<div class="option-card mbfsk">
+<div class="option-label">OPTION E</div>
+<div class="option-name">MBFSK · 36개월</div>
+<div class="badge-row"><span class="badge green">🛡️ 신차교환보험 3년</span></div>
+<div class="option-detail"><div class="dl">할부원금</div><div class="dv">25,308,180원</div></div>
+<div class="option-detail"><div class="dl">선수금 (63.845%)</div><div class="dv">44,691,820원</div></div>
+<div class="option-detail"><div class="dl">적용이자율</div><div class="dv">6.6109%</div></div>
+<div class="option-detail"><div class="dl">마일리지</div><div class="dv">20,000</div></div>
+<div class="option-initial"><div class="il">출고전 내실금액</div><div class="iv">5,000만</div></div>
+<div class="option-highlight"><div class="monthly-label">월 납입금</div><div class="monthly-val">776,940<span class="monthly-unit">원</span></div></div>
+</div>
+
+<!-- Option F: MBFSK 48 -->
+<div class="option-card mbfsk recommended" style="border-color:#4CAF5088;">
+<div class="option-label">OPTION F</div>
+<div class="option-name">MBFSK · 48개월</div>
+<div class="badge-row"><span class="badge green">🛡️ 신차교환보험 3년</span></div>
+<div class="option-detail"><div class="dl">할부원금</div><div class="dv">25,308,180원</div></div>
+<div class="option-detail"><div class="dl">선수금 (63.845%)</div><div class="dv">44,691,820원</div></div>
+<div class="option-detail"><div class="dl">적용이자율</div><div class="dv">6.2699%</div></div>
+<div class="option-detail"><div class="dl">마일리지</div><div class="dv">20,000</div></div>
+<div class="option-initial"><div class="il">출고전 내실금액</div><div class="iv">5,000만</div></div>
+<div class="option-highlight"><div class="monthly-label">월 납입금</div><div class="monthly-val">597,500<span class="monthly-unit">원</span></div></div>
+</div>
+
 </div>
 
 <!-- 핵심 요약 -->
 <div class="summary-row">
 <div class="summary-box red">
 <div class="sb-label">초기부담액 범위</div>
-<div class="sb-value">4,000만 ~ 4,531만</div>
+<div class="sb-value">4,000만 ~ 5,000만</div>
 <div class="sb-sub">선납금 + 등록비용</div>
 </div>
 <div class="summary-box gold">
 <div class="sb-label">월 납입금 범위</div>
-<div class="sb-value">705,700 ~ 1,075,900</div>
-<div class="sb-sub">할부 옵션에 따라 선택</div>
+<div class="sb-value">597,500 ~ 1,075,900</div>
+<div class="sb-sub">6가지 옵션 비교</div>
 </div>
 </div>
 
