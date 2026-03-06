@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Maybach S580 운용리스 비교견적서</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&family=Playfair+Display:wght@400;700&family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:#0a0a0f;color:#e8e8e8;font-family:'Noto Sans KR',sans-serif;min-height:100vh}
+.container{max-width:680px;margin:0 auto;padding:16px}
+.banner{width:100%;border-radius:12px;overflow:hidden;margin-bottom:20px}
+.banner img{width:100%;display:block}
+.header{text-align:center;margin-bottom:24px;padding:20px 0;border-bottom:1px solid rgba(201,168,76,0.3)}
+.header .date{font-family:'Montserrat',sans-serif;font-size:12px;color:#888;letter-spacing:2px;margin-bottom:8px}
+.header h1{font-family:'Playfair Display',serif;font-size:26px;color:#c9a84c;margin-bottom:4px;letter-spacing:1px}
+.header .subtitle{font-size:13px;color:#999}
+.header .quote-no{font-family:'Montserrat',sans-serif;font-size:11px;color:#666;margin-top:8px;letter-spacing:1px}
+.customer-bar{display:flex;justify-content:space-between;align-items:center;background:linear-gradient(135deg,rgba(201,168,76,0.15),rgba(201,168,76,0.05));border:1px solid rgba(201,168,76,0.25);border-radius:10px;padding:14px 20px;margin-bottom:24px}
+.customer-bar .label{font-size:12px;color:#888;margin-bottom:2px}
+.customer-bar .value{font-size:15px;font-weight:700;color:#fff}
+.customer-bar .gold{color:#c9a84c}
+.card{background:linear-gradient(145deg,#12121a,#0e0e16);border:1px solid rgba(255,255,255,0.06);border-radius:12px;padding:20px;margin-bottom:16px}
+.card-title{display:flex;align-items:center;gap:8px;font-size:15px;font-weight:700;color:#c9a84c;margin-bottom:16px;padding-bottom:10px;border-bottom:1px solid rgba(201,168,76,0.15)}
+.vehicle-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.vehicle-item{padding:10px 12px;background:rgba(255,255,255,0.03);border-radius:8px}
+.vehicle-item .vi-label{font-size:11px;color:#777;margin-bottom:2px}
+.vehicle-item .vi-value{font-size:14px;font-weight:600;color:#fff}
+.vehicle-item.full{grid-column:1/-1;text-align:center;background:rgba(201,168,76,0.08);border:1px solid rgba(201,168,76,0.2)}
+.vehicle-item.full .vi-value{color:#c9a84c;font-size:18px;font-weight:900}
+.reg-row{display:flex;justify-content:space-between;align-items:center;padding:8px 0;border-bottom:1px solid rgba(255,255,255,0.04)}
+.reg-row:last-child{border-bottom:none}
+.reg-row .rr-label{font-size:13px;color:#999}
+.reg-row .rr-value{font-size:13px;font-weight:600;color:#ddd}
+.reg-row .rr-note{font-size:11px;color:#666}
+.reg-row.total{padding-top:12px;margin-top:4px;border-top:2px solid rgba(201,168,76,0.3)}
+.reg-row.total .rr-label{font-weight:700;color:#c9a84c}
+.reg-row.total .rr-value{font-size:16px;font-weight:900;color:#c9a84c}
+.compare-header{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:16px}
+.compare-tab{text-align:center;padding:14px 12px;border-radius:10px;border:2px solid rgba(201,168,76,0.3);background:rgba(201,168,76,0.05)}
+.compare-tab .ct-period{font-family:'Montserrat',sans-serif;font-size:22px;font-weight:700;color:#c9a84c}
+.compare-tab .ct-label{font-size:11px;color:#888;margin-top:2px}
+.compare-row{display:grid;grid-template-columns:1.2fr 1fr 1fr;gap:0;border-bottom:1px solid rgba(255,255,255,0.04)}
+.compare-row:last-child{border-bottom:none}
+.compare-cell{padding:10px 12px;font-size:13px}
+.compare-cell.label{color:#999;background:rgba(255,255,255,0.02)}
+.compare-cell.val{color:#ddd;font-weight:500;text-align:right}
+.compare-row.header-row .compare-cell{font-size:12px;font-weight:700;color:#c9a84c;text-align:center;background:rgba(201,168,76,0.08);padding:8px 12px}
+.compare-row.header-row .compare-cell.label{text-align:left}
+.compare-row.total-row{border-top:2px solid rgba(201,168,76,0.3)}
+.compare-row.total-row .compare-cell{font-weight:900;font-size:14px;padding:12px}
+.compare-row.total-row .compare-cell.val{color:#c9a84c}
+.summary-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:16px}
+.summary-box{border-radius:12px;padding:18px 14px;text-align:center}
+.summary-box.plan-a{background:linear-gradient(145deg,rgba(201,168,76,0.15),rgba(201,168,76,0.05));border:2px solid rgba(201,168,76,0.4)}
+.summary-box.plan-b{background:linear-gradient(145deg,rgba(180,60,60,0.15),rgba(180,60,60,0.05));border:2px solid rgba(180,60,60,0.4)}
+.summary-box .sb-period{font-family:'Montserrat',sans-serif;font-size:14px;font-weight:700;margin-bottom:12px}
+.plan-a .sb-period{color:#c9a84c}
+.plan-b .sb-period{color:#d4645c}
+.summary-box .sb-item{margin-bottom:10px}
+.summary-box .sb-label{font-size:11px;color:#888;margin-bottom:2px}
+.summary-box .sb-value{font-size:17px;font-weight:900}
+.plan-a .sb-value{color:#c9a84c}
+.plan-b .sb-value{color:#d4645c}
+.summary-box .sb-value.monthly{font-size:22px}
+.verdict{background:linear-gradient(135deg,rgba(201,168,76,0.12),rgba(201,168,76,0.03));border:1px solid rgba(201,168,76,0.3);border-radius:12px;padding:18px;text-align:center;margin-bottom:20px}
+.verdict .v-title{font-size:13px;color:#c9a84c;font-weight:700;margin-bottom:8px}
+.verdict .v-text{font-size:12px;color:#bbb;line-height:1.7}
+.verdict .v-highlight{color:#c9a84c;font-weight:700}
+.landing-banner{display:block;width:100%;padding:16px;background:linear-gradient(135deg,#c9a84c,#a8893e);border-radius:10px;text-align:center;text-decoration:none;margin-bottom:16px;transition:all 0.3s}
+.landing-banner:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(201,168,76,0.3)}
+.landing-banner .lb-text{font-size:14px;font-weight:700;color:#0a0a0f}
+.landing-banner .lb-sub{font-size:11px;color:rgba(10,10,15,0.7);margin-top:2px}
+.footer{text-align:center;padding:20px 0;border-top:1px solid rgba(255,255,255,0.06)}
+.footer .f-name{font-size:14px;font-weight:700;color:#c9a84c;margin-bottom:4px}
+.footer .f-info{font-size:12px;color:#666;line-height:1.8}
+.footer .f-brand{font-family:'Playfair Display',serif;font-size:11px;color:#444;margin-top:10px;letter-spacing:2px}
